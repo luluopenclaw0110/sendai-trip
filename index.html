@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>森林之都・仙台 | 仙台旅遊官方網站</title>
+  <meta name="description" content="探索仙台的森林風光與伊達文化。仙台城、松島、瑞鳳殿等熱門景點，完整旅遊攻略。">
+  <meta name="theme-color" content="#2D5A3D">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%232D5A3D'/><text y='.9em' font-size='80' x='50%' text-anchor='middle'>仙</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <span class="header__logo-dot"></span>
+          森林之都・仙台
+        </a>
+
+        <nav class="header__nav" id="headerNav">
+          <a href="index.html" class="nav-link active">首頁</a>
+          <a href="spots.html" class="nav-link">景點探索</a>
+          <a href="food.html" class="nav-link">美饌探索</a>
+          <a href="#about-section" class="nav-link">關於仙台</a>
+          <a href="spots.html" class="nav-cta">開始探索</a>
+        </nav>
+
+        <button class="nav-toggle" id="navToggle" aria-label="開啟選單">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1920&q=80"
+           alt="仙台城市景觀"
+           loading="eager">
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Sendai, Japan</p>
+      <h1 class="hero__title">森林之都・伊達的故鄉</h1>
+      <p class="hero__subtitle">
+        伊達政宗的傳奇、日本三景的絕美、七夕祭的璀璨——<br>
+        走進仙台，遇見東北的美。
+      </p>
+      <div class="hero__actions">
+        <a href="spots.html" class="btn btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          探索景點
+        </a>
+        <a href="#spots-section" class="btn btn--outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+          </svg>
+          精選介紹
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT / INTRO ===================== -->
+  <section class="section section--cream" id="about-section">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__tag">About Sendai</span>
+        <h2 class="section__title">仙台，日本的森林之都</h2>
+        <div class="divider" style="margin-bottom: 20px;"></div>
+        <p class="section__desc">
+          仙台位於日本東北地區，是伊達政宗建造的城市。這裡綠意盎然，被譽為「森林之都」，
+          擁有日本三景之一的松島、莊嚴華麗的瑞鳳殿，以及每年夏季日本最大的七夕祭典。
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; margin-top: 48px;"
+           class="fade-in stats-grid">
+        <div>
+          <div style="font-family: var(--font-serif); font-size: 2.8rem; font-weight: 900; color: var(--primary);">400+</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.05em;">年伊達家歷史</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-serif); font-size: 2.8rem; font-weight: 900; color: var(--primary);">1600+</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.05em;">年瑞鳳殿</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-serif); font-size: 2.8rem; font-weight: 900; color: var(--primary);">5</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.05em;">大精選景點</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-serif); font-size: 2.8rem; font-weight: 900; color: var(--primary);">300萬+</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.05em;">年訪人次</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SPOTS GRID ===================== -->
+  <section class="section" id="spots-section">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__tag">Spotlight</span>
+        <h2 class="section__title">探索仙台</h2>
+        <div class="divider" style="margin-bottom: 20px;"></div>
+        <p class="section__desc">
+          從伊達政宗的權力象徵到日本三景的絕美風光，從莊嚴華麗的陵寢到熱鬧璀璨的七夕祭——<br>
+          仙台的每一處風景，都在訴說不同的故事。
+        </p>
+      </div>
+
+      <div class="spots-grid">
+        <!-- Featured: 仙台城 -->
+        <a href="spots.html#sendai-castle" class="spot-card spot-card--featured fade-in">
+          <div class="spot-card__image">
+            <img src="images/spots/spot_01_1.jpg" alt="仙台城" loading="lazy">
+            <span class="spot-card__badge">Featured</span>
+          </div>
+          <div class="spot-card__content">
+            <div class="spot-card__icon">🏯</div>
+            <h3 class="spot-card__title">仙台城（青葉城）</h3>
+            <p class="spot-card__desc">
+              伊達政宗於1603年建造的權力象徵，俯瞰仙台市區的最佳展望點。
+              天守閣雖已不存，但遺蹟與復原石牆仍可感受當年氣勢，秋季紅葉時分景色最為壯觀。
+            </p>
+            <div class="spot-card__footer">
+              <span class="spot-card__tag">歷史古城</span>
+              <div class="spot-card__arrow">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 瑞鳳殿 -->
+        <a href="spots.html#zuishoden" class="spot-card fade-in">
+          <div class="spot-card__image">
+            <img src="images/spots/spot_02_1.jpg" alt="瑞鳳殿" loading="lazy">
+            <span class="spot-card__badge">神社</span>
+          </div>
+          <div class="spot-card__content">
+            <div class="spot-card__icon">⛩️</div>
+            <h3 class="spot-card__title">瑞鳳殿</h3>
+            <p class="spot-card__desc">
+              供奉伊達政宗的華麗陵寢，採用桃山時代絢爛豪華的建築樣式。
+              朱紅色樓門與金色裝飾在楓紅中更顯莊嚴，是仙台最具代表性的文化遺產。
+            </p>
+            <div class="spot-card__footer">
+              <span class="spot-card__tag">神社陵寢</span>
+              <div class="spot-card__arrow">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 松島 -->
+        <a href="spots.html#matsushima" class="spot-card fade-in">
+          <div class="spot-card__image">
+            <img src="images/spots/spot_03_1.jpg" alt="松島" loading="lazy">
+            <span class="spot-card__badge">日本三景</span>
+          </div>
+          <div class="spot-card__content">
+            <div class="spot-card__icon">🌊</div>
+            <h3 class="spot-card__title">松島</h3>
+            <p class="spot-card__desc">
+              散落約260個大小島嶼的松林群島，被譽為日本三景之一。
+              島上松林蔥鬱，與碧海藍天構成獨特的水墨畫般景色，乘坐觀光船穿梭各島之間是最佳遊覽方式。
+            </p>
+            <div class="spot-card__footer">
+              <span class="spot-card__tag">自然景觀</span>
+              <div class="spot-card__arrow">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 七夕祭 -->
+        <a href="spots.html#tanabata" class="spot-card fade-in">
+          <div class="spot-card__image">
+            <img src="images/spots/spot_04_1.jpg" alt="七夕祭" loading="lazy">
+            <span class="spot-card__badge">傳統祭典</span>
+          </div>
+          <div class="spot-card__content">
+            <div class="spot-card__icon">🎐</div>
+            <h3 class="spot-card__title">七夕祭</h3>
+            <p class="spot-card__desc">
+              日本最規模最大的七夕慶典，每年8月6日至8日舉行。
+              街上掛滿五彩繽紛的風幡、短冊、和紙花等華麗裝飾，長達數百公尺的裝飾隧道令人嘆為觀止。
+            </p>
+            <div class="spot-card__footer">
+              <span class="spot-card__tag">傳統祭典</span>
+              <div class="spot-card__arrow">→</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 定義山 -->
+        <a href="spots.html#teigaku" class="spot-card fade-in">
+          <div class="spot-card__image">
+            <img src="images/spots/spot_05_1.jpg" alt="定義山" loading="lazy">
+            <span class="spot-card__badge">自然秘境</span>
+          </div>
+          <div class="spot-card__content">
+            <div class="spot-card__icon">🌲</div>
+            <h3 class="spot-card__title">定義山</h3>
+            <p class="spot-card__desc">
+              距離仙台市區約30分鐘車程的隱秘山林景點，以定義川清澈水流與周邊自然風光聞名。
+              瀑布、吊橋、原始森林構成療癒人心的風景畫，是在人秘境。
+            </p>
+            <div class="spot-card__footer">
+              <span class="spot-card__tag">自然秘境</span>
+              <div class="spot-card__arrow">→</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOD TEASER ===================== -->
+  <section class="section" id="food-section">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__tag">Sendai Cuisine</span>
+        <h2 class="section__title">仙台美饌圖鑑</h2>
+        <div class="divider" style="margin-bottom: 20px;"></div>
+        <p class="section__desc">
+          從炭火烤牛的舌到甜入心脾的毛豆泥——<br>
+          仙台的靈魂，藏在每一道料理裡。
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;" class="fade-in food-preview-grid">
+        <a href="food.html#gyutan" class="food-preview-card">
+          <div class="food-preview-card__image">
+            <img src="images/foods/food_01_1.jpg" alt="牛舌" loading="lazy">
+          </div>
+          <div class="food-preview-card__body">
+            <span class="food-preview-card__tag">🥩 炭火烤牛舌</span>
+            <h3 class="food-preview-card__title">牛舌（牛タン）</h3>
+            <p class="food-preview-card__desc">仙台第一名物，炭火烤牛舌厚切，配上蔥花飯糰與麥飯，是到仙台必吃的經典美味。</p>
+            <div class="food-preview-card__link">探索美食 →</div>
+          </div>
+        </a>
+        <a href="food.html#zunda" class="food-preview-card">
+          <div class="food-preview-card__image">
+            <img src="images/foods/food_02_1.jpg" alt="毛豆泥" loading="lazy">
+          </div>
+          <div class="food-preview-card__body">
+            <span class="food-preview-card__tag">🍡 毛豆泥甜點</span>
+            <h3 class="food-preview-card__title">毛豆泥（ずんだ）</h3>
+            <p class="food-preview-card__desc">仙台特產甜點，毛豆泥麻糬、喜久福大福、毛豆奶昔，都是在地人最愛的甜蜜滋味。</p>
+            <div class="food-preview-card__link">探索美食 →</div>
+          </div>
+        </a>
+        <a href="food.html#seafood" class="food-preview-card">
+          <div class="food-preview-card__image">
+            <img src="images/foods/food_03_1.jpg" alt="海鮮" loading="lazy">
+          </div>
+          <div class="food-preview-card__body">
+            <span class="food-preview-card__tag">🍣 海鮮壽司</span>
+            <h3 class="food-preview-card__title">海鮮壽司</h3>
+            <p class="food-preview-card__desc">仙台港直送，鹽釜港新鮮漁獲，握壽司與生魚片鮮甜美味，是海鮮愛好者的天堂。</p>
+            <div class="food-preview-card__link">探索美食 →</div>
+          </div>
+        </a>
+        <a href="food.html#misogyutan" class="food-preview-card">
+          <div class="food-preview-card__image">
+            <img src="images/foods/food_04_1.jpg" alt="味噌烤牛舌" loading="lazy">
+          </div>
+          <div class="food-preview-card__body">
+            <span class="food-preview-card__tag">🥩 味噌烤牛舌</span>
+            <h3 class="food-preview-card__title">味噌烤牛舌</h3>
+            <p class="food-preview-card__desc">仙台在地吃法，牛舌用味噌醃製後炭烤，鹹香夠味，是搭配白飯的絕佳選擇。</p>
+            <div class="food-preview-card__link">探索美食 →</div>
+          </div>
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;" class="fade-in">
+        <a href="food.html" class="btn btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+          </svg>
+          完整美饌圖鑑
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA SECTION ===================== -->
+  <section class="section section--dark">
+    <div class="container--narrow" style="text-align: center;">
+      <div class="fade-in">
+        <span class="section__tag">Let's Go</span>
+        <h2 class="section__title" style="color: #fff; margin-top: 16px; margin-bottom: 20px;">
+          準備好探索仙台了嗎？
+        </h2>
+        <div class="divider" style="margin-bottom: 24px;"></div>
+        <p class="section__desc" style="margin-bottom: 40px;">
+          從伊達家的傳奇到松島的絕美，從瑞鳳殿的莊嚴到七夕祭的璀璨——<br>
+          仙台的每一處風景，都在等待你的足跡。
+        </p>
+        <a href="spots.html" class="btn btn--primary" style="font-size: 1rem; padding: 16px 40px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+          開啟旅程
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">
+            <span class="dot"></span>
+            森林之都・仙台
+          </div>
+          <p class="footer__brand-desc">
+            探索仙台伊達文化與自然風光的交匯點。
+            從仙台城的歷史到松島的絕美，從瑞鳳殿的莊嚴到七夕祭的璀璨，
+            這裡記錄著仙台最動人的故事。
+          </p>
+        </div>
+        <div>
+          <div class="footer__col-title">快速連結</div>
+          <div class="footer__links">
+            <a href="index.html">首頁</a>
+            <a href="spots.html">景點探索</a>
+            <a href="food.html">美饌探索</a>
+            <a href="#about-section">關於仙台</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">美饌圖鑑</div>
+          <div class="footer__links">
+            <a href="food.html#gyutan">牛舌</a>
+            <a href="food.html#zunda">毛豆泥</a>
+            <a href="food.html#seafood">海鮮壽司</a>
+            <a href="food.html#misogyutan">味噌烤牛舌</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">探索景點</div>
+          <div class="footer__links">
+            <a href="spots.html#sendai-castle">仙台城</a>
+            <a href="spots.html#zuishoden">瑞鳳殿</a>
+            <a href="spots.html#matsushima">松島</a>
+            <a href="spots.html#tanabata">七夕祭</a>
+            <a href="spots.html#teigaku">定義山</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 森林之都・仙台 <span class="footer__accent">|</span> 仙台旅遊導覽</span>
+        <span>設計 by 龍龍團隊</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+  <style>
+    @media (max-width: 768px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+      }
+    }
+
+    /* ===================== FOOD PREVIEW CARDS ===================== */
+    .food-preview-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .food-preview-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      display: grid;
+      grid-template-columns: 140px 1fr;
+    }
+
+    .food-preview-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .food-preview-card__image {
+      height: 140px;
+      overflow: hidden;
+    }
+
+    .food-preview-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .food-preview-card:hover .food-preview-card__image img {
+      transform: scale(1.08);
+    }
+
+    .food-preview-card__body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .food-preview-card__tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .food-preview-card__title {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .food-preview-card__desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .food-preview-card__link {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .food-preview-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .food-preview-card {
+        grid-template-columns: 100px 1fr;
+      }
+      .food-preview-card__image {
+        height: 110px;
+      }
+    }
+  </style>
+</body>
+</html>
