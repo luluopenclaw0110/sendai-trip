@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenClaw vs Hermes Agent 深度比較</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif; background: #1a1a2e; color: #fff; }
+.slide { min-height: 100vh; padding: 60px 80px; display: flex; flex-direction: column; justify-content: center; border-bottom: 3px solid #333; }
+.slide:nth-child(odd) { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+.slide:nth-child(even) { background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%); }
+h1 { font-size: 3em; margin-bottom: 30px; color: #00d9ff; text-align: center; }
+h2 { font-size: 2.2em; margin-bottom: 25px; color: #ffd700; border-left: 5px solid #ffd700; padding-left: 20px; }
+h3 { font-size: 1.5em; color: #00d9ff; margin: 20px 0 10px 0; }
+p, li { font-size: 1.3em; line-height: 1.8; color: #e0e0e0; }
+ul { margin-left: 40px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+.card { background: rgba(255,255,255,0.05); border-radius: 15px; padding: 30px; border: 1px solid rgba(255,255,255,0.1); }
+.card h3 { color: #ff6b6b; margin-top: 0; }
+.card.green h3 { color: #4ecdc4; }
+table { width: 100%; border-collapse: collapse; margin-top: 30px; font-size: 1.1em; }
+th, td { padding: 15px 20px; text-align: left; border-bottom: 1px solid #333; }
+th { background: #ffd700; color: #1a1a2e; font-weight: bold; }
+tr:hover { background: rgba(255,255,255,0.05); }
+.badge { display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.8em; margin: 3px; }
+.badge.good { background: #4ecdc4; color: #1a1a2e; }
+.badge.bad { background: #ff6b6b; color: #fff; }
+.badge.neutral { background: #ffd700; color: #1a1a2e; }
+.badge.info { background: #00d9ff; color: #1a1a2e; }
+.pros li { color: #4ecdc4; }
+.cons li { color: #ff6b6b; }
+.highlight { background: linear-gradient(90deg, #ffd700, #ff6b6b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold; }
+.skill-tag { background: #6c5ce7; color: white; padding: 3px 10px; border-radius: 5px; font-size: 0.9em; margin: 3px; display: inline-block; }
+.timeline { display: flex; flex-direction: column; gap: 20px; }
+.timeline-item { display: flex; align-items: center; gap: 20px; }
+.timeline-num { width: 40px; height: 40px; background: #ffd700; color: #1a1a2e; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+.title-slide { text-align: center; justify-content: center; }
+.title-slide h1 { font-size: 4em; color: #ffd700; text-shadow: 0 0 30px rgba(255,215,0,0.5); }
+.title-slide p { font-size: 1.8em; color: #00d9ff; margin-top: 20px; }
+.nav { position: fixed; bottom: 30px; right: 30px; background: rgba(255,215,0,0.9); color: #1a1a2e; padding: 15px 25px; border-radius: 30px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="slide title-slide">
+<h1>🔬 OpenClaw vs Hermes Agent</h1>
+<p>深度比較分析報告</p>
+<p style="font-size: 1.2em; color: #888; margin-top: 40px;">2026年4月  |  龍龍研究團隊</p>
+</div>
+
+<div class="slide">
+<h2>📊 基本資訊比較</h2>
+<table>
+<tr><th>維度</th><th>OpenClaw</th><th>Hermes Agent</th></tr>
+<tr><td>開發者</td><td>OpenClaw Community</td><td>Nous Research</td></tr>
+<tr><td>定位</td><td>Multi-channel Gateway + AI Agent</td><td>Self-improving Autonomous Agent</td></tr>
+<tr><td>授權</td><td>MIT 開源</td><td>開源</td></tr>
+<tr><td>主要語言</td><td>TypeScript/Node.js</td><td>Python</td></tr>
+<tr><td>官方網站</td><td>docs.openclaw.ai</td><td>hermes-agent.nousresearch.com</td></tr>
+<tr><td>GitHub</td><td>github.com/openclaw/openclaw</td><td>github.com/nousresearch/hermes-agent</td></tr>
+</table>
+</div>
+
+<div class="slide">
+<h2>⚙️ 核心功能比較</h2>
+<div class="grid">
+<div class="card green">
+<h3>✅ OpenClaw 強項</h3>
+<ul>
+<li>15+ 訊息平台整合</li>
+<li>本地 Gateway 架構</li>
+<li>Mobile Nodes (iOS/Android)</li>
+<li>Plugin 系統靈活擴展</li>
+<li>Workspace 隔離</li>
+<li>Web Control UI 友好</li>
+<li>簡易安裝 (npm)</li>
+</ul>
+</div>
+<div class="card">
+<h3>✅ Hermes Agent 強項</h3>
+<ul>
+<li>內建自我學習系統</li>
+<li>持久化記憶成長</li>
+<li>Cron 定時任務原生支援</li>
+<li>Subagent 委派系統</li>
+<li>MCP 協定支援</li>
+<li>Programmatic Tool Calling</li>
+<li>SSH 遠端操作能力</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="slide">
+<h2>👍 優點比較</h2>
+<div class="grid">
+<div class="card green">
+<h3>OpenClaw 優點</h3>
+<ul class="pros">
+<li><strong>多管道整合王者</strong>：一個 Gateway 接 15+ 平台</li>
+<li><strong>本地優先</strong>：資料不外洩，隱私性高</li>
+<li><strong>安裝簡單</strong>：npm install 5分鐘完成</li>
+<li><strong>UI 友好</strong>：Web Control UI 易上手</li>
+<li><strong>Plugin 生態</strong>：50+ 工具捆綁</li>
+<li><strong>社區活躍</strong>：5200+ Skills 可用</li>
+<li><strong>跨平台</strong>：Win/Mac/Linux 通用</li>
+</ul>
+</div>
+<div class="card">
+<h3>Hermes Agent 優點</h3>
+<ul class="pros">
+<li><strong>記憶持久化</strong>：越用越聰明，跨 session 成長</li>
+<li><strong>自我改進</strong>：技能會在使用中優化</li>
+<li><strong>Cron 原生</strong>：內建排程，無需外部工具</li>
+<li><strong>委派系統</strong>：平行生成多個 subagent</li>
+<li><strong>SSH 能力</strong>：直接操控遠端伺服器</li>
+<li><strong>MCP 支援</strong>：標準化擴展協定</li>
+<li><strong>模型中立</strong>：可切換不同 LLM</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="slide">
+<h2>👎 缺點比較</h2>
+<div class="grid">
+<div class="card">
+<h3>OpenClaw 缺點</h3>
+<ul class="cons">
+<li><strong>記憶系統較弱</strong>：依賴外部檔案管理</li>
+<li><strong>無自我學習</strong>：不會隨使用改進</li>
+<li><strong>Cron 需外掛</strong>：需設定系統 cron</li>
+<li><strong>Subagent 分散</strong>：無統一委派機制</li>
+<li><strong>MCP 支援</strong>：目前不明確</li>
+<li><strong>複雜任務</strong>：需手動規劃流程</li>
+</ul>
+</div>
+<div class="card">
+<h3>Hermes Agent 缺點</h3>
+<ul class="cons">
+<li><strong>安裝較複雜</strong>：需要 Python 環境</li>
+<li><strong>平台整合少</strong>：主要 CLI/Telegram/Discord</li>
+<li><strong>Web UI 弱</strong>：主要文字介面</li>
+<li><strong>外部整合困難</strong>：串接 API 需要較多功夫</li>
+<li><strong>文件不足</strong>：社群資源較少</li>
+<li><strong>學習曲線</strong>：需要技術背景</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="slide">
+<h2>🎯 適用場景</h2>
+<table>
+<tr><th>場景</th><th>推薦</th><th>原因</th></tr>
+<tr><td>跨平台個人助理</td><td><span class="badge good">OpenClaw</span></td><td>15+ 訊息平台一網打盡</td></tr>
+<tr><td>長程自動化任務</td><td><span class="badge good">Hermes</span></td><td>記憶持久化，越用越強</td></tr>
+<tr><td>伺服器管理</td><td><span class="badge good">Hermes</span></td><td>SSH 遠端操控能力</td></tr>
+<tr><td>隱私敏感資料</td><td><span class="badge good">兩者皆可</span></td><td>都是本地部署</td></tr>
+<tr><td>快速原型開發</td><td><span class="badge good">OpenClaw</span></td><td>安裝快，Skill 豐富</td></tr>
+<tr><td>研究用途</td><td><span class="badge good">Hermes</span></td><td>自我學習機制有趣</td></tr>
+</table>
+</div>
+
+<div class="slide">
+<h2>🛠️ OpenClaw 透過技能包可以達成的事</h2>
+<p style="margin-bottom: 20px;">以下 Hermes 的功能，OpenClaw 可以透過<strong class="highlight">撰寫技能包</strong>來實現：</p>
+
+<h3>1. 記憶持久化系統</h3>
+<div style="background: rgba(108,92,231,0.2); padding: 20px; border-radius: 10px; margin: 15px 0;">
+<p>✅ <strong>可達成</strong>：撰寫 Skill 保存關鍵上下文到檔案，下次啟動時讀取</p>
+<p class="skill-tag">memory-manager</p><p class="skill-tag">context-persist</p>
+</div>
+
+<h3>2. 定時 Cron 工作</h3>
+<div style="background: rgba(108,92,231,0.2); padding: 20px; border-radius: 10px; margin: 15px 0;">
+<p>✅ <strong>可達成</strong>：透過 system cron + OpenClaw script 或直接用 exec 工具</p>
+<p class="skill-tag">cron-scheduler</p><p class="skill-tag">auto-reminder</p>
+</div>
+
+<h3>3. Subagent 委派系統</h3>
+<div style="background: rgba(108,92,231,0.2); padding: 20px; border-radius: 10px; margin: 15px 0;">
+<p>✅ <strong>已支援</strong>：OpenClaw 本身就有 sessions_spawn 機制</p>
+<p class="skill-tag">multi-agent</p><p class="skill-tag">task-delegation</p>
+</div>
+
+<h3>4. SSH 遠端操作</h3>
+<div style="background: rgba(108,92,231,0.2); padding: 20px; border-radius: 10px; margin: 15px 0;">
+<p>✅ <strong>可達成</strong>：透過 exec 工具執行 SSH 命令</p>
+<p class="skill-tag">ssh-command</p><p class="skill-tag">remote-exec</p>
+</div>
+
+<h3>5. MCP 協定支援</h3>
+<div style="background: rgba(255,107,107,0.2); padding: 20px; border-radius: 10px; margin: 15px 0;">
+<p>⚠️ <strong>需研究</strong>：目前 OpenClaw 文件未明確支援 MCP</p>
+</div>
+
+<h3>6. 技能自我改進</h3>
+<div style="background: rgba(255,107,107,0.2); padding: 20px; border-radius: 10px; margin: 15px 0;">
+<p>⚠️ <strong>需研究</strong>：需要 Framework 層面支援，Skill 難以完全模擬</p>
+</div>
+</div>
+
+<div class="slide">
+<h2>📋 OpenClaw 技能包缺口分析</h2>
+<table>
+<tr><th>功能</th><th>現有技能</th><th>建議開發</th><th>優先級</th></tr>
+<tr><td>定時任務</td><td>cron skill</td><td>auto-cron</td><td><span class="badge info">高</span></td></tr>
+<tr><td>記憶管理</td><td>無</td><td>smart-memory</td><td><span class="badge info">高</span></td></tr>
+<tr><td>SSH 管理</td><td>無</td><td>ssh-helper</td><td><span class="badge neutral">中</span></td></tr>
+<tr><td>MCP 支援</td><td>無</td><td>mcp-bridge</td><td><span class="badge bad">低</span></td></tr>
+<tr><td>自我學習</td><td>無</td><td>learning-loop</td><td><span class="badge bad">低</span></td></tr>
+</table>
+</div>
+
+<div class="slide">
+<h2>💡 建議與結論</h2>
+<div class="card" style="margin: 20px 0;">
+<h3>OpenClaw 的核心價值</h3>
+<ul>
+<li>多平台整合是目前最強的解決方案</li>
+<li>適合做<strong class="highlight">個人超級助手</strong>：跨 App 協調工作</li>
+<li>技能包生態豐富，5分鐘建立專業助理</li>
+</ul>
+</div>
+<div class="card" style="margin: 20px 0;">
+<h3>Hermes 的核心價值</h3>
+<ul>
+<li>自我學習機制是獨特優勢，適合<strong class="highlight">長程任務</strong></li>
+<li>SSH 能力強，適合<strong class="highlight">DevOps 自動化</strong></li>
+<li>適合研究者和進階用戶</li>
+</ul>
+</div>
+<div class="card green" style="margin: 20px 0;">
+<h3>最佳策略</h3>
+<p>根據使用場景選擇，或兩者<strong>同時部署</strong>：</p>
+<p>OpenClaw 處理日常跨平台任務 + Hermes 處理長程研究任務</p>
+</div>
+</div>
+
+<div class="slide title-slide">
+<h1>謝謝觀看</h1>
+<p style="color: #888;">龍龍研究團隊 | 2026年4月</p>
+<p style="margin-top: 30px; color: #ffd700;">OpenClaw 🦞 vs Hermes 🐻</p>
+</div>
+
+</body>
+</html>
